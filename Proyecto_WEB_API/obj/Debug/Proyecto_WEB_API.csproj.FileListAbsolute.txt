@@ -1,0 +1,2 @@
+C:\Users\adria\source\repos\Proyecto_WEB_API\Proyecto_WEB_API\obj\Debug\Proyecto_WEB_API.csproj.AssemblyReference.cache
+C:\Users\adria\source\repos\Proyecto_WEB_API\Proyecto_WEB_API\obj\Debug\Proyecto_WEB_API.csproj.CoreCompileInputs.cache

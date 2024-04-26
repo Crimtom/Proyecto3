@@ -1,0 +1,288 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC3C0D63-0E19-407C-B330-02768157792A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Proyecto_WEB_API</RootNamespace>
+    <AssemblyName>Proyecto_WEB_API</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSU\ConsultaPokemon.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSD\Ability.cs" />
+    <Compile Include="CSD\AbilityEffectChange.cs" />
+    <Compile Include="CSD\AbilityFlavorText.cs" />
+    <Compile Include="CSD\AbilityPokemon.cs" />
+    <Compile Include="CSD\APIResource.cs" />
+    <Compile Include="CSD\APIResourceList.cs" />
+    <Compile Include="CSD\AwesomeName.cs" />
+    <Compile Include="CSD\Berry.cs" />
+    <Compile Include="CSD\BerryFirmness.cs" />
+    <Compile Include="CSD\BerryFlavorMap.cs" />
+    <Compile Include="CSD\BerryFlavor.cs" />
+    <Compile Include="CSD\ChainLink.cs" />
+    <Compile Include="CSD\Characteristic.cs" />
+    <Compile Include="CSD\ContestComboDetail.cs" />
+    <Compile Include="CSD\ContestComboSets.cs" />
+    <Compile Include="CSD\ContestEffect.cs" />
+    <Compile Include="CSD\ContestName.cs" />
+    <Compile Include="CSD\ContestType.cs" />
+    <Compile Include="CSD\Description.cs" />
+    <Compile Include="CSD\Effect.cs" />
+    <Compile Include="CSD\EggGroup.cs" />
+    <Compile Include="CSD\Encounter.cs" />
+    <Compile Include="CSD\EncounterCondition.cs" />
+    <Compile Include="CSD\EncounterConditionValue.cs" />
+    <Compile Include="CSD\EncounterMethod.cs" />
+    <Compile Include="CSD\EncounterMethodRate.cs" />
+    <Compile Include="CSD\EncounterVersionDetails.cs" />
+    <Compile Include="CSD\EvolutionChain.cs" />
+    <Compile Include="CSD\EvolutionDetail.cs" />
+    <Compile Include="CSD\EvolutionTrigger.cs" />
+    <Compile Include="CSD\FlavorBerryMap.cs" />
+    <Compile Include="CSD\FlavorText.cs" />
+    <Compile Include="CSD\Gender.cs" />
+    <Compile Include="CSD\Generation.cs" />
+    <Compile Include="CSD\GenerationGameIndex.cs" />
+    <Compile Include="CSD\Genus.cs" />
+    <Compile Include="CSD\GrowthRate.cs" />
+    <Compile Include="CSD\GrowthRateExperienceLevel.cs" />
+    <Compile Include="CSD\Item.cs" />
+    <Compile Include="CSD\ItemAttribute.cs" />
+    <Compile Include="CSD\ItemCategory.cs" />
+    <Compile Include="CSD\ItemFlingEffect.cs" />
+    <Compile Include="CSD\ItemHolderPokemon.cs" />
+    <Compile Include="CSD\ItemHolderPokemonVersionDetail.cs" />
+    <Compile Include="CSD\ItemPocket.cs" />
+    <Compile Include="CSD\ItemSprites.cs" />
+    <Compile Include="CSD\Language.cs" />
+    <Compile Include="CSD\Location.cs" />
+    <Compile Include="CSD\LocationArea.cs" />
+    <Compile Include="CSD\LocationAreaEncounter.cs" />
+    <Compile Include="CSD\Machine.cs" />
+    <Compile Include="CSD\MachineVersionDetail.cs" />
+    <Compile Include="CSD\Move.cs" />
+    <Compile Include="CSD\MoveAilment.cs" />
+    <Compile Include="CSD\MoveBattleStyle.cs" />
+    <Compile Include="CSD\MoveBattleStylePreference.cs" />
+    <Compile Include="CSD\MoveCategory.cs" />
+    <Compile Include="CSD\MoveDamageClass.cs" />
+    <Compile Include="CSD\MoveFlavorText.cs" />
+    <Compile Include="CSD\MoveLearnMethod.cs" />
+    <Compile Include="CSD\MoveMetaData.cs" />
+    <Compile Include="CSD\MoveStatAffect.cs" />
+    <Compile Include="CSD\MoveStatAffectSets.cs" />
+    <Compile Include="CSD\MoveStatChange.cs" />
+    <Compile Include="CSD\MoveTarget.cs" />
+    <Compile Include="CSD\Name.cs" />
+    <Compile Include="CSD\NamedAPIResource.cs" />
+    <Compile Include="CSD\NamedAPIResourceList.cs" />
+    <Compile Include="CSD\Nature.cs" />
+    <Compile Include="CSD\NaturePokeathlonStatAffect.cs" />
+    <Compile Include="CSD\NaturePokeathlonStatAffectSets.cs" />
+    <Compile Include="CSD\NatureStatAffectSets.cs" />
+    <Compile Include="CSD\NatureStatChange.cs" />
+    <Compile Include="CSD\PalParkArea.cs" />
+    <Compile Include="CSD\PalParkEncounterArea.cs" />
+    <Compile Include="CSD\PalParkEncounterSpecies.cs" />
+    <Compile Include="CSD\PastMoveStatValues.cs" />
+    <Compile Include="CSD\PokeathlonStat.cs" />
+    <Compile Include="CSD\Pokedex.cs" />
+    <Compile Include="CSD\Pokemon.cs" />
+    <Compile Include="CSD\PokemonAbility.cs" />
+    <Compile Include="CSD\PokemonColor.cs" />
+    <Compile Include="CSD\PokemonCries.cs" />
+    <Compile Include="CSD\PokemonEncounter.cs" />
+    <Compile Include="CSD\PokemonEntry.cs" />
+    <Compile Include="CSD\PokemonForm.cs" />
+    <Compile Include="CSD\PokemonFormSprites.cs" />
+    <Compile Include="CSD\PokemonFormType.cs" />
+    <Compile Include="CSD\PokemonHabitat.cs" />
+    <Compile Include="CSD\PokemonHeldItem.cs" />
+    <Compile Include="CSD\PokemonHeldItemVersion.cs" />
+    <Compile Include="CSD\PokemonMove.cs" />
+    <Compile Include="CSD\PokemonMoveVersion.cs" />
+    <Compile Include="CSD\PokemonShape.cs" />
+    <Compile Include="CSD\PokemonSpecies.cs" />
+    <Compile Include="CSD\PokemonSpeciesDexEntry.cs" />
+    <Compile Include="CSD\PokemonSpeciesGender.cs" />
+    <Compile Include="CSD\PokemonSpeciesVariety.cs" />
+    <Compile Include="CSD\PokemonSprites.cs" />
+    <Compile Include="CSD\PokemonStat.cs" />
+    <Compile Include="CSD\PokemonType.cs" />
+    <Compile Include="CSD\PokemonTypePast.cs" />
+    <Compile Include="CSD\Region.cs" />
+    <Compile Include="CSD\Resultados_Pokemon.cs" />
+    <Compile Include="CSD\Stat.cs" />
+    <Compile Include="CSD\SuperContestEffect.cs" />
+    <Compile Include="CSD\Type.cs" />
+    <Compile Include="CSD\TypePokemon.cs" />
+    <Compile Include="CSD\TypeRelations.cs" />
+    <Compile Include="CSD\TypeRelationsPast.cs" />
+    <Compile Include="CSD\VerboseEffect.cs" />
+    <Compile Include="CSD\Version.cs" />
+    <Compile Include="CSD\VersionEncounterDetail.cs" />
+    <Compile Include="CSD\VersionGameIndex.cs" />
+    <Compile Include="CSD\VersionGroup.cs" />
+    <Compile Include="CSU\ConsultaPokemon.aspx.cs">
+      <DependentUpon>ConsultaPokemon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSU\ConsultaPokemon.aspx.designer.cs">
+      <DependentUpon>ConsultaPokemon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49494</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49494/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
